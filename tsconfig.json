@@ -1,0 +1,32 @@
+{
+    "ts-node": {
+        "transpileOnly": true,
+        "compilerOptions": {
+            "emitDecoratorMetadata": true,
+            "downlevelIteration": true,
+            "experimentalDecorators": true,
+            "allowJs": true,
+            "module": "commonjs"
+        }
+    },
+    "compilerOptions": {
+        "target": "ESNext",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "noFallthroughCasesInSwitch": true,
+        "outDir": "./dist",
+        "isolatedModules": false,
+        "sourceMap": true,
+        "noEmit": false,
+        "baseUrl": "./src"
+    },
+    "exclude": ["node_modules", "build", "dist"]
+}

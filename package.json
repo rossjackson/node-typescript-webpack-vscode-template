@@ -1,0 +1,36 @@
+{
+    "name": "typescript-webpack-vscode-template",
+    "version": "1.0.0",
+    "description": "A template for node typescript server using webpack, vscode with prettier",
+    "main": "./dist/index.js",
+    "scripts": {
+        "start": "concurrently \"rm -rf ./dist\" \"./node_modules/.bin/tsc -p ./tsconfig.json\" \"npm run dev:server:webpack\" \"npm run dev:server:nodemon\"",
+        "dev:server:webpack": "webpack --config webpack.config.server.js --mode none --watch",
+        "dev:server:nodemon": "rm -rf build/main.js && wait-on -l build/main.js && nodemon build/main.js",
+        "build:server": "webpack --config webpack.config.server.js --mode production",
+        "build:dev:server": "webpack --config webpack.config.server.js --mode development"
+    },
+    "keywords": [
+        "node",
+        "typescript",
+        "webpack",
+        "vscode",
+        "template"
+    ],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/webpack-node-externals": "3.0.0",
+        "concurrently": "8.2.0",
+        "dotenv": "16.3.1",
+        "nodemon": "3.0.1",
+        "ts-loader": "9.4.4",
+        "tsconfig-paths-webpack-plugin": "4.1.0",
+        "typescript": "5.1.6",
+        "wait-on": "7.0.1",
+        "webpack": "5.88.2",
+        "webpack-cli": "5.1.4",
+        "webpack-dev-server": "4.15.1",
+        "webpack-node-externals": "3.0.0"
+    }
+}
