@@ -1,12 +1,12 @@
 {
     "ts-node": {
+        "require": ["tsconfig-paths/register"],
         "transpileOnly": true,
+        "files": true,
         "compilerOptions": {
             "emitDecoratorMetadata": true,
             "downlevelIteration": true,
-            "experimentalDecorators": true,
-            "allowJs": true,
-            "module": "commonjs"
+            "experimentalDecorators": true
         }
     },
     "compilerOptions": {

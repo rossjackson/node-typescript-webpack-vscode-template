@@ -1,13 +1,11 @@
-const path = require('path');
-const nodeExternals = require('webpack-node-externals');
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
-const dotenv = require('dotenv');
-const webpack = require('webpack');
+import dotenv from 'dotenv'
+import path from 'path'
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
+import webpack from 'webpack'
+import nodeExternals from 'webpack-node-externals'
 
-module.exports = (_, { mode }) => {
-    // mode : production and development are for the release
-    // mode : none is for local development
-    const isProd = mode === 'production' || mode === 'development';
+const config = (_: any, { mode }: any): webpack.Configuration => {
+    const isProd = !!mode
     return {
         target: 'node',
         entry: path.resolve(__dirname, 'index.ts'),
@@ -17,7 +15,7 @@ module.exports = (_, { mode }) => {
             clean: true,
         },
         resolve: {
-            extensions: ['.ts', '.tsx'],
+            extensions: ['.ts', '.js'],
             plugins: [
                 new TsconfigPathsPlugin({
                     configFile: './tsconfig.json',
@@ -64,6 +62,7 @@ module.exports = (_, { mode }) => {
                     : {}
             ),
         ],
-        devtool: isProd ? false : 'inline-source-map',
-    };
-};
+    }
+}
+
+export default config
