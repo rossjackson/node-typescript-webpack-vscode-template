@@ -1,5 +1,5 @@
-import sampleFunc from 'sample';
+import sampleFunc from 'sample'
 
-console.log('entry point');
+console.log('entry point')
 
-sampleFunc();
+sampleFunc()

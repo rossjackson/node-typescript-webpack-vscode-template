@@ -8,7 +8,8 @@
         "build:server": "webpack --mode production",
         "build:dev:server": "webpack --mode development",
         "prepare": "husky install",
-        "lint": "eslint src/** ./index.ts  --fix "
+        "lint": "eslint src/** ./index.ts  --fix",
+        "lint:tsc": "tsc --project tsconfig.json --noEmit"
     },
     "keywords": [
         "node",
@@ -28,6 +29,8 @@
         "@typescript-eslint/parser": "6.3.0",
         "dotenv": "16.3.1",
         "eslint": "8.47.0",
+        "eslint-config-prettier": "9.0.0",
+        "eslint-plugin-prettier": "5.0.0",
         "husky": "8.0.3",
         "jest": "29.6.2",
         "prettier": "3.0.1",
