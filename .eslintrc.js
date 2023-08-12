@@ -28,5 +28,6 @@ module.exports = {
                 caughtErrorsIgnorePattern: '^_',
             },
         ],
+        complexity: ['error', 7],
     },
 }
