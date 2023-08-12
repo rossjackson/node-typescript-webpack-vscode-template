@@ -29,5 +29,6 @@ module.exports = {
             },
         ],
         complexity: ['error', 7],
+        'no-console': ['error'],
     },
 }
