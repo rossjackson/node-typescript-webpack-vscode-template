@@ -12,7 +12,7 @@ module.exports = {
     ignorePatterns: ['src/**/*.test.ts'],
     rules: {
         '@typescript-eslint/no-unused-vars': [
-            'error', // or "error"
+            'error',
             {
                 argsIgnorePattern: '^_',
                 varsIgnorePattern: '^_',
